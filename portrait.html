@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelSmith | Portrait Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fancybox CSS and JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+</head>
+<body>
+  <header class="animated-header">
+    <div class="header-top">
+      <div class="logo-group">
+        <img src="logo.png" alt="PixelSmith Logo" class="logo" />
+        <h1 class="site-title">PixelSmith</h1>
+      </div>
+      <div class="theme-toggle">
+        <label for="themeToggle">Dark Mode</label>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <p class="subtitle">Faces full of soul</p>
+  </header>
+
+  <nav class="sticky-nav">
+    <a href="index.html">Home</a>
+    <a href="landscape.html">Landscape</a>
+    <a href="wedding.html">Wedding</a>
+    <a href="portrait.html">Portrait</a>
+    <a href="nature.html">Nature</a>
+    <a href="event.html">Event</a>
+  </nav>
+
+  <section class="gallery-section">
+    <h2>Portrait Photography</h2>
+    <div class="gallery">
+      <a data-fancybox="gallery" href="https://via.placeholder.com/600x400?text=Portrait+1"><img src="https://via.placeholder.com/600x400?text=Portrait+1" alt="Portrait 1"></a>
+      <a data-fancybox="gallery" href="https://via.placeholder.com/600x400?text=Portrait+2"><img src="https://via.placeholder.com/600x400?text=Portrait+2" alt="Portrait 2"></a>
+      <a data-fancybox="gallery" href="https://via.placeholder.com/600x400?text=Portrait+3"><img src="https://via.placeholder.com/600x400?text=Portrait+3" alt="Portrait 3"></a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mpwdzrdg" method="POST" class="contact-form">
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" id="email" placeholder="Your Email" required />
+      <label for="message">Your Message:</label>
+      <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <div class="social">
+    <h3>Follow Me</h3>
+    <a href="https://instagram.com/wilderador" target="_blank">Instagram</a>
+    <a href="https://youtube.com/theuncapturedyt" target="_blank">YouTube</a>
+  </div>
+  <footer>
+    <p>&copy; 2025 PixelSmith. Crafted with passion.</p>
+  </footer>
+  <script>
+    document.getElementById('themeToggle').addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

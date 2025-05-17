@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelSmith | Nature Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery-nature-final.css" />
+  
+
+  <!-- Fancybox CSS and JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+</head>
+<body>
+  <header class="animated-header">
+    <div class="header-top">
+      <div class="logo-group">
+        <img src="logo.png" alt="PixelSmith Logo" class="logo" />
+        <h1 class="site-title">PixelSmith</h1>
+      </div>
+      <div class="theme-toggle">
+        <label for="themeToggle">Dark Mode</label>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <p class="subtitle">The art of the outdoors</p>
+  </header>
+
+  <nav class="sticky-nav">
+    <a href="index.html">Home</a>
+    <a href="landscape.html">Landscape</a>
+    <a href="wedding.html">Wedding</a>
+    <a href="portrait.html">Portrait</a>
+    <a href="nature.html">Nature</a>
+    <a href="event.html">Event</a>
+  </nav>
+
+  <section class="gallery-section">
+    <h2>Nature Photography</h2>
+    <div class="gallery">
+      <a data-fancybox="gallery" href="wildlife_images/5.webp"><img src="wildlife_images/5.webp" alt="Nature 1" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/1.webp"><img src="wildlife_images/1.webp" alt="Nature 3" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/6.webp"><img src="wildlife_images/6.webp" alt="Nature 5" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/4.webp"><img src="wildlife_images/4.webp" alt="Nature 6" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/2.webp"><img src="wildlife_images/2.webp" alt="Nature 7" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/12.webp"><img src="wildlife_images/12.webp" alt="Nature 8" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/8.webp"><img src="wildlife_images/8.webp" alt="Nature 9" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/14.webp"><img src="wildlife_images/14.webp" alt="Nature 11" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/15.webp"><img src="wildlife_images/15.webp" alt="Nature 12" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/16.webp"><img src="wildlife_images/16.webp" alt="Nature 13" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/18.webp"><img src="wildlife_images/18.webp" alt="Nature 14" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/19.webp"><img src="wildlife_images/19.webp" alt="Nature 15" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/11.webp"><img src="wildlife_images/11.webp" alt="Nature 16" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/10.webp"><img src="wildlife_images/10.webp" alt="Nature 10" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/21.webp"><img src="wildlife_images/21.webp" alt="Nature 21" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/20.webp"><img src="wildlife_images/20.webp" alt="Nature 16" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/12.webp"><img src="wildlife_images/12.webp" alt="Nature 16" loading="lazy"></a>
+      <a data-fancybox="gallery" href="wildlife_images/17.webp"><img src="wildlife_images/17.webp" alt="Nature 16" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mpwdzrdg" method="POST" class="contact-form">
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" id="email" placeholder="Your Email" required />
+      <label for="message">Your Message:</label>
+      <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <div class="social">
+    <h3>Follow Me</h3>
+    <a href="https://instagram.com/wilderador" target="_blank">Instagram</a>
+    <a href="https://youtube.com/theuncapturedyt" target="_blank">YouTube</a>
+  </div>
+  <footer>
+    <p>&copy; 2025 PixelSmith. Crafted with passion.</p>
+  </footer>
+  <script>
+    document.getElementById('themeToggle').addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
