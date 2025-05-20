@@ -5,103 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PixelSmith | Portrait Gallery</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery-nature-final.css" />
 
   <!-- Fancybox CSS and JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
+
+<link href="https://fonts.googleapis.com/css2?family=Endless+Loveness&family=Evossry&family=Attena&display=swap" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 <body>
-
-
-
-
-
-
-  <header class="animated-header">
+<div id="main-content">
+<header class="animated-header">
     <div class="header-top">
       <div class="logo-group">
         <img src="logo.png" alt="PixelSmith Logo" class="logo" />
         <h1 class="site-title">PixelSmith</h1>
       </div>
-      <div class="theme-toggle">
-        <label for="themeToggle">Dark Mode</label>
-        <label class="switch">
-          <input type="checkbox" id="themeToggle">
-          <span class="slider round"></span>
-        </label>
+      
+        
       </div>
     </div>
-    <p class="subtitle">Faces full of soul</p>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="landscape.html">Landscape</a>
+      <a href="wedding.html">Wedding</a>
+      <a href="portrait.html">Portrait</a>
+      <a href="nature.html">Nature</a>
+      <a href="event.html">Event</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <nav class="sticky-nav">
-    <a href="index.html">Home</a>
-    <a href="landscape.html">Landscape</a>
-    <a href="wedding.html">Wedding</a>
-    <a href="portrait.html">Portrait</a>
-    <a href="nature.html">Nature</a>
-    <a href="event.html">Event</a>
-  </nav>
 
   <section class="gallery-section">
-    <h2>Portrait Photography</h2>
-    <div class="gallery">
-      <a data-fancybox="gallery" href="https://via.placeholder.com/600x400?text=Portrait+1"><img src="https://via.placeholder.com/600x400?text=Portrait+1" alt="Portrait 1"></a>
-      <a data-fancybox="gallery" href="https://via.placeholder.com/600x400?text=Portrait+2"><img src="https://via.placeholder.com/600x400?text=Portrait+2" alt="Portrait 2"></a>
-      <a data-fancybox="gallery" href="https://via.placeholder.com/600x400?text=Portrait+3"><img src="https://via.placeholder.com/600x400?text=Portrait+3" alt="Portrait 3"></a>
+    
+    
+  <section class="quote-section"><p>“You, as you are. Beautiful. Bold. Unrepeatable.”</p></section>
+
+<div class="gallery">
+      <a data-fancybox="gallery" href="images/Portrait4.webp"><img src="images/Portrait4.webp" alt="Portrait 1" loading="lazy"></a>
+      <a data-fancybox="gallery" href="images/Portrait2.webp"><img src="images/Portrait2.webp" alt="Portrait 2" loading="lazy"></a>
+      <a data-fancybox="gallery" href="images/Portrait3.webp"><img src="images/Portrait3.webp" alt="Portrait 3" loading="lazy"></a>
+      <a data-fancybox="gallery" href="images/Portrait5.webp"><img src="images/Portrait5.webp" alt="Portrait 4" loading="lazy"></a>
+      <a data-fancybox="gallery" href="images/Portrait6.webp"><img src="images/Portrait6.webp" alt="Portrait 5" loading="lazy"></a>
+      <a data-fancybox="gallery" href="images/Portrait1.webp"><img src="images/Portrait1.webp" alt="Portrait 6" loading="lazy"></a>
     </div>
   </section>
 
   
 
-  <div class="social">
-    <h3>Follow Me</h3>
-    <a href="https://instagram.com/wilderador" target="_blank">Instagram</a>
-    <a href="https://youtube.com/theuncapturedyt" target="_blank">YouTube</a>
-  </div>
-  <footer>
-    <p>&copy; 2025 PixelSmith. Crafted with passion.</p>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-quote">Let’s turn moments into memories &#129309</p>
+      
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+      <p class="footer-copy">&copy; 2025 PixelSmith. Crafted with heart by Kundan.</p>
+    </div>
   </footer>
-  <script>
-    document.getElementById('themeToggle').addEventListener('change', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
 
-<!-- Floating Dark Mode Toggle -->
-<div class="fab-toggle" id="themeFabToggle" title="Toggle Theme">
-  <span class="fab-icon">🌙</span>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const fab = document.getElementById("themeFabToggle");
-    const icon = fab.querySelector(".fab-icon");
-    const body = document.body;
-
-    function updateThemeIcon() {
-      if (body.classList.contains("dark")) {
-        icon.textContent = "☀️";
-      } else {
-        icon.textContent = "🌙";
-      }
-    }
-
-    // Set initial state from localStorage
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark");
-    }
-
-    updateThemeIcon();
-
-    fab.addEventListener("click", () => {
-      body.classList.toggle("dark");
-      localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
-      updateThemeIcon();
-    });
-  });
-</script>
-
 </body>
 </html>

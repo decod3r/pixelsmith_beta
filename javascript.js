@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Initialize Fancybox for galleries
+  Fancybox.bind("[data-fancybox='gallery']", {});
+
   const toggle = document.getElementById("themeToggle");
   const body = document.body;
 
@@ -28,4 +32,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
 
   images.forEach(img => observer.observe(img));
+});
+
+// Smooth fade-in on page load
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
+
+  // Smooth fade-out on navigation
+  const anchors = document.querySelectorAll("a[href]");
+  anchors.forEach(anchor => {
+    const href = anchor.getAttribute("href");
+    if (!href.startsWith("#") && !href.startsWith("javascript") && !href.startsWith("mailto")) {
+      anchor.addEventListener("click", function (e) {
+        const target = this.getAttribute("target");
+        if (target !== "_blank" && this.hostname === location.hostname) {
+          e.preventDefault();
+          document.body.classList.remove("loaded");
+          setTimeout(() => {
+            window.location.href = this.href;
+          }, 300);
+        }
+      });
+    }
+  });
 });
